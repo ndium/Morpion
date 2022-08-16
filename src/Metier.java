@@ -12,37 +12,42 @@ public class Metier
         this.grille[positionX][positionY] = symbole;
     }
 
-    /**public boolean conditionDeVictoire(char symbole)
+    public boolean conditionDeVictoire(char symbole)
     {
         //Ligne verticale
-        if(this.grille[0][0] && this.grille[1][0] && this.grille[2][0] == symbole)
+        if(this.grille[0][0] == symbole && this.grille[1][0] == symbole && this.grille[2][0] == symbole)
             return true;
 
-        if(this.grille[0][1] && this.grille[1][1] && this.grille[2][1] == symbole)
+        if(this.grille[0][1] == symbole && this.grille[1][1] == symbole && this.grille[2][1] == symbole)
             return true;
 
-        if(this.grille[0][2] && this.grille[1][2] && this.grille[2][2] == symbole)
+        if(this.grille[0][2] == symbole && this.grille[1][2] == symbole && this.grille[2][2] == symbole)
             return true;
 
         //Ligne horizontale
-        if(this.grille[0][0] && this.grille[0][1] && this.grille[0][2] == symbole)
+        if(this.grille[0][0] == symbole && this.grille[0][1] == symbole && this.grille[0][2] == symbole)
             return true;
 
-        if(this.grille[1][0] && this.grille[1][1] && this.grille[1][2] == symbole)
+        if(this.grille[1][0] == symbole && this.grille[1][1] == symbole && this.grille[1][2] == symbole)
             return true;
 
-        if(this.grille[1][0] && this.grille[1][1] && this.grille[1][2] == symbole)
+        if(this.grille[1][0] == symbole && this.grille[1][1] == symbole && this.grille[1][2] == symbole)
             return true;
 
         //Diagonale
-        if(this.grille[0][0] && this.grille[1][1] && this.grille[2][2] == symbole)
+        if(this.grille[0][0] == symbole && this.grille[1][1] == symbole && this.grille[2][2] == symbole)
             return true;
 
-        if(this.grille[0][2] && this.grille[1][1] && this.grille[2][0] == symbole)
+        if(this.grille[0][2] == symbole && this.grille[1][1] == symbole && this.grille[2][0] == symbole)
             return true;
 
         return false;
-    }*/
+    }
+
+    public char getCharTab(int positionX, int positionY)
+    {
+        return this.grille[positionX][positionY];
+    }
 
     public String afficherTableau()
     {
@@ -65,11 +70,12 @@ public class Metier
         Metier m1 = new Metier();
         System.out.println(m1.afficherTableau());
 
-        m1.ajouterSymbole('O',0,2);
-        m1.ajouterSymbole('O',1,1);
+        m1.ajouterSymbole('O',0,0);
+        m1.ajouterSymbole('O',1,0);
         m1.ajouterSymbole('O',2,0);
+
         System.out.println(m1.afficherTableau());
 
-        System.out.println(this.grille[0][0]);
+        System.out.println(m1.conditionDeVictoire('O'));
     }
 }
