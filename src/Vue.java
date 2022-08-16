@@ -1,10 +1,9 @@
 public class Vue
 {
+    //IHM à venir
     public Vue()
-    {}
+    {
 
-    @Override
-    public String toString() {
-        return super.toString();
     }
+
 }
