@@ -13,7 +13,7 @@ Morpion Console Game is a simple implementation of the Tic-Tac-Toe (Morpion) gam
 ## Usage
 
 1. Clone the repository: `git clone https://github.com/ndium/Morpion.git`
-2. Compile the Java code: `javac MorpionGame.java`
-3. Run the game: `java MorpionGame`
+2. Compile the Java code: `javac Metier.java`
+3. Run the game: `java Metier.java`
 
 Follow the on-screen instructions to make your moves.
